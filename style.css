@@ -6,16 +6,23 @@
     outline: none;
 }
 
+/* --- ALTERADO: Centralização absoluta com Flexbox --- */
 body{
     background: #8A51FC;
+    display: flex;
+    justify-content: center; /* Centraliza na horizontal */
+    align-items: center;     /* Centraliza na vertical */
+    min-height: 100vh;       /* Garante altura total da tela */
+    padding: 20px;           /* Evita que o main cole nas bordas em telas muito pequenas */
 }
 
+/* --- ALTERADO: Removida a margem antiga --- */
 main{
     width: 375px;
-    background: #F4F4F4;
+    background: #51ca5a;
     border-radius: 20px;
-    margin: 0 auto 40px;
     padding: 44px 24px 23px;
+    /* margin antiga removida pois o flexbox já centraliza */
 }
 
 .logo{
@@ -87,12 +94,39 @@ section{
 }
 
 .currency{
-    color: #777777;
-    font-size: 14px;
+color: #ffffff;
+    font-size: 17px;
 }
 
 .currency-value, .currency-value-to-convert{
     color: #555555;
     font-weight: 700;
     font-size: 20px;
+}
+
+.currency-box img{
+    width: 55px;
+}
+.area-select p{
+    font-size: 21px;
+    color: black;
+}
+
+.sessao-conversao {
+    background-size: contain;
+    background-position: center;
+    color: white;
+    animation: alternarFundo 6s infinite; 
+}
+
+@keyframes alternarFundo {
+    0%, 45% {
+        background-image: url('./assets/logo.gif');
+    }
+    50%, 95% {
+        background-image: linear-gradient(rgb(138, 87, 247), rgb(88 201 99));
+    }
+    100% {
+        background-image: url('./assets/logo.gif');
+    }
 }
