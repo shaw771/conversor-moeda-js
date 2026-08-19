@@ -32,14 +32,15 @@ main{
 }
 
 label{
-    font-size: 14px;
+font-size: 22px;
     font-weight: 400;
-    color:#77777777
+    color: black;
+    font-style: italic;
 }
 
 select, input{
     background: #FFFFFF;
-    border: 1px solid #88888888;
+    border: 1px solid #8a57f7;
     border-radius: 4px;
     height: 48px;
     width: 100%;

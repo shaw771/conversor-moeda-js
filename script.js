@@ -34,11 +34,13 @@ function funcaoConverterMoeda(){
     ValorParaMudas1.innerHTML = TipoDaMoeda[MoedaDeEntrada].simbulo
     valorParaConverte2.innerHTML = TipoDaMoeda[MoedaDeSaida].simbulo
     //Mudas os elementos HTML, os numeros ja calculados 
-    valorParaConverte2.innerHTML = new Intl.NumberFormat(MoedaDeSaida,{
+    
+    ValorParaMudas1.innerHTML = new Intl.NumberFormat(MoedaDeSaida,{
         style: "currency",
         currency: MoedaDeSaida
     }).format(ValoraConverter);
-    ValorParaMudas1.innerHTML = new Intl.NumberFormat(MoedaDeEntrada,{
+    
+    valorParaConverte2.innerHTML = new Intl.NumberFormat(MoedaDeEntrada,{
         style: "currency",
         currency: MoedaDeEntrada
     }).format(ValorConvertido);
